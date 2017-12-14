@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/open-iconic/font/css/open-iconic-bootstrap.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
