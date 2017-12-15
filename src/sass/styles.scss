@@ -1,47 +1,48 @@
-@import './variables';
-@import './mixins';
+@import "./variables";
+@import "./mixins";
 
-@import 
-'~bootstrap/scss/functions',
-'~bootstrap/scss/variables',
-'~bootstrap/scss/mixins',
-'~bootstrap/scss/print',
-'~bootstrap/scss/reboot',
-'~bootstrap/scss/type',
-'~bootstrap/scss/images',
-'~bootstrap/scss/code',
-'~bootstrap/scss/grid',
-'~bootstrap/scss/tables',
-'~bootstrap/scss/forms',
-'~bootstrap/scss/buttons',
-'~bootstrap/scss/transitions',
-'~bootstrap/scss/dropdown',
-'~bootstrap/scss/button-group',
-'~bootstrap/scss/input-group',
-'~bootstrap/scss/custom-forms',
-'~bootstrap/scss/nav',
-'~bootstrap/scss/navbar',
-'~bootstrap/scss/card',
-'~bootstrap/scss/breadcrumb',
-'~bootstrap/scss/pagination',
-'~bootstrap/scss/badge',
-'~bootstrap/scss/jumbotron',
-'~bootstrap/scss/alert',
-'~bootstrap/scss/progress',
-'~bootstrap/scss/media',
-'~bootstrap/scss/list-group',
-'~bootstrap/scss/close',
-'~bootstrap/scss/modal',
-'~bootstrap/scss/tooltip',
-'~bootstrap/scss/popover',
-'~bootstrap/scss/carousel',
-'~bootstrap/scss/utilities';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/print";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
 
 .card-columns {
     @include media-breakpoint-only(xl) {
-      column-count: 3;
+        column-count: 3;
     }
+
+
     @include media-breakpoint-only(sm) {
-      column-count: 2;
+        column-count: 2;
     }
-  }
+}
