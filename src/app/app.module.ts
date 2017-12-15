@@ -11,6 +11,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
+import { SkillsChartComponent } from './skills/skills-chart/skills-chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     AboutComponent,
     SkillsComponent,
     PageNotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    SkillsChartComponent
   ],
   imports: [
     BrowserModule,
