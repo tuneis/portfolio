@@ -1,117 +1,35 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Portfolio</h1>
+    <p class="lead">A collection of current/past projects done by Ryan Tunis.</p>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <ngx-charts-advanced-pie-chart [view]="view" [scheme]="statusScheme" [results]="projectsStatusData" [gradient]="gradient" (select)="onSelect($event)"
+          label="Status">
+        </ngx-charts-advanced-pie-chart>
+      </div>
+      <div class="col-md-6">
+        <ngx-charts-advanced-pie-chart [view]="view" [scheme]="platformScheme" [results]="projectsPlatformData" [gradient]="gradient" (select)="onSelect($event)"
+          label="Platform">
+        </ngx-charts-advanced-pie-chart>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container add-margin">
-  <h1>Portfolio</h1>
-  <hr>
   <div class="card-columns">
-    <div class="card">
-      <img class="card-img-top img-pad" src="/assets/img/agrotelligent.png" alt="Card image cap">
+    <div class="card" *ngFor="let project of projects">
+      <img class="card-img-top img-pad" [attr.src]="project.img" [attr.alt]="project.name">
       <div class="card-body">
-        <h4 class="card-title">AgroTelligent</h4>
-        <p class="card-text">As a predecessor of RTAG, this project was the beginning stages of real time weather data analysis.</p>
-        <a class="btn btn-success border-dark" href="http://www.agrotelligent.net" target="_blank">View</a>
+        <h4 class="card-title">{{ project.name }}</h4>
+        <p class="card-text">{{ project.description }}</p>
         <div class="icon-position">
-          <i class="fab fa-windows fa-2x windows-color"></i>
+          <i [attr.class]="project.icon"></i>
         </div>
+        <a [attr.class]="project.btnClass" [attr.href]="project.link" target="_blank">{{ project.status }}</a>
       </div>
     </div>
-    <div class="card">
-      <img class="card-img-top img-pad" src="/assets/img/rtag.png" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">RTAG</h4>
-        <p class="card-text">Real Time Agriculture is a system developed to record and analyze real time weather data across the province of Ontario.</p>
-        <div class="icon-position">
-          <i class="fab fa-angular fa-2x angular-color"></i>
-        </div>
-        <a class="btn btn-success border-dark" href="http://rtag.niagararesearch.ca" target="_blank">View</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top img-pad" src="/assets/img/cp.png" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">RCP</h4>
-        <p class="card-text">The Research Crop Portal is a crop management portal used to help the Grain Farmers of Ontario analyze and process
-          their yield data.</p>
-        <div class="icon-position">
-          <i class="fab fa-windows fa-2x windows-color"></i>
-        </div>
-        <a class="btn btn-success border-dark" href="http://cropportal.niagararesearch.ca" target="_blank">View</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top img-pad" src="/assets/img/mpt.png" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">MPT</h4>
-        <p class="card-text">Musician's Practice Tracker is a mobile application developed in Xamarin Forms for musicians to organize their practice
-          schedule, set goals, and see statistics about the progress they are making for all of their exercises.</p>
-        <div class="icon-position">
-          <i class="fab fa-android fa-2x android-color"></i>
-        </div>
-        <a class="btn btn-success border-dark" href="https://play.google.com/store/apps/details?id=com.tuneis.musicianspracticetracker&hl=en"
-          target="_blank">View</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top img-pad" src="/assets/img/fn.png" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">FN Dictionary</h4>
-        <p class="card-text">The FN dictionary is a joke application that querys the words from the dictionary and inserts vulgarity throughout
-          the definitions in clever spots.</p>
-        <div class="icon-position">
-          <i class="fab fa-android fa-2x android-color"></i>
-        </div>
-        <a class="btn btn-success border-dark" href="https://play.google.com/store/apps/details?id=com.tuneis.fnd&hl=en" target="_blank">View</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top img-pad" src="/assets/img/m2w.jpg"
-        alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">M2W</h4>
-        <p class="card-text">A band website for the heavy metal band from Hamilton, ON called Men To Wolves.</p>
-        <div class="icon-position">
-          <i class="fab fa-angular fa-2x angular-color"></i>
-        </div>
-        <a class="btn btn-primary border-dark disabled" href="http//www.mentowolves.com" target="_blank">In Beta</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top img-pad" src="/assets/img/otsi_project.png"
-        alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">OTSI-Project</h4>
-        <p class="card-text">Under NDA, cannot disclose until release.</p>
-        <div class="icon-position">
-          <i class="fab fa-android fa-2x android-color"></i>
-        </div>
-        <a class="btn btn-primary border-dark disabled" href="http://www.wheatland.com/components/com_easyblog/themes/wireframe/images/placeholder-image.png"
-          target="_blank">In Beta</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top img-pad" src="/assets/img/soiloptix.png" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">SoilOptix</h4>
-        <p class="card-text">SoilOptix uses propietary algorithms to generate High-Definition Top Soil Maps to help farmers improve their soil
-          health and grow better crops.</p>
-        <div class="icon-position">
-          <i class="fab fa-windows fa-2x windows-color"></i>
-        </div>
-        <a class="btn btn-danger border-dark disabled" href="#" target="_blank">In Alpha</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top img-pad" src="http://www.wheatland.com/components/com_easyblog/themes/wireframe/images/placeholder-image.png"
-        alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Art Therapy Directives</h4>
-        <p class="card-text">An app to manage art therapy directives and log practicums.</p>
-        <div class="icon-position">
-          <i class="fab fa-android fa-2x android-color"></i>
-        </div>
-        <a class="btn btn-danger border-dark disabled" href="https://play.google.com/store/apps/details?id=com.tuneis.practicumtracker&hl=en"
-          target="_blank">In Alpha</a>
-      </div>
-    </div>
-
   </div>
 </div>

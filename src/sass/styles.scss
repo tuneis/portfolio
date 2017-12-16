@@ -48,17 +48,25 @@
 }
 
 .android-color {
-    color: rgb(133, 200, 8);
+    color: $android-color;
 }
 
-.windows-color {
-    color: rgb(0, 128, 255);
+.aspnet-color {
+    color: $aspnet-color;;
+}
+
+.aspnetcore-color {
+    color: $aspnetcore-color;
 }
 
 .angular-color {
-    color: rgb(221, 0, 49);
+    color: $angular-color;
 }
 
 .add-margin{
     margin-top: 20px;
+}
+
+.bg-purple{
+    background-color: $aspnetcore-color;
 }
