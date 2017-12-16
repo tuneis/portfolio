@@ -5,12 +5,12 @@
     <hr class="my-4">
     <div class="row">
       <div class="col-md-6">
-        <ngx-charts-advanced-pie-chart [view]="view" [scheme]="statusScheme" [results]="projectsStatusData" [gradient]="gradient" (select)="onSelect($event)"
+        <ngx-charts-advanced-pie-chart [view]="view" [scheme]="statusScheme" [results]="projectsStatusData" (select)="onSelect($event)"
           label="Status">
         </ngx-charts-advanced-pie-chart>
       </div>
       <div class="col-md-6">
-        <ngx-charts-advanced-pie-chart [view]="view" [scheme]="platformScheme" [results]="projectsPlatformData" [gradient]="gradient" (select)="onSelect($event)"
+        <ngx-charts-advanced-pie-chart [view]="view" [scheme]="platformScheme" [results]="projectsPlatformData" (select)="onSelect($event)"
           label="Platform">
         </ngx-charts-advanced-pie-chart>
       </div>
